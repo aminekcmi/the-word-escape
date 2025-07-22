@@ -16,10 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="bg-slate-50 dark:bg-slate-950">
         <ClerkProvider>
           <ConvexClientProvider>
-            <ThemeProvider attribute="data-theme" enableSystem>{children}</ThemeProvider>
+            <ThemeProvider attribute="data-theme">{children}</ThemeProvider>
           </ConvexClientProvider>
         </ClerkProvider>
       </body>

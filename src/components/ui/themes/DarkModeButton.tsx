@@ -17,8 +17,8 @@ export default function DarkModeButton() {
     }
 
     return (
-        <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-            {theme === 'light' ? <IoMdMoon size={24} /> : <IoMdSunny size={24} />}
+        <button className="hover:scale-105 transition-transform hover:cursor-pointer" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+            {theme === 'light' ? <IoMdMoon className="text-slate-950" size={24} /> : <IoMdSunny className="text-slate-50" size={24} />}
         </button>
     );
 }
