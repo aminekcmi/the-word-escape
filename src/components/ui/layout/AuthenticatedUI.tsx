@@ -1,8 +1,6 @@
 import DarkModeButton from "../themes/DarkModeButton";
-
-interface ButtonType {
-    message: string
-};
+import CreateGameButton from "../game/CreateGameButton";
+import JoinGameButton from "../game/JoinGameButton";
 
 export default function AuthenticatedUI() {
     return (
@@ -21,17 +19,11 @@ export default function AuthenticatedUI() {
                     <p className="mt-2 text-slate-700 dark:text-slate-400 text-xs 5xs:text-sm">Start a game or join one</p>
 
                     <div className="flex flex-col justify-center items-center mt-5">
-                        <Button message="Create new game" />
-                        <Button message="Join game" />
+                        <CreateGameButton />
+                        <JoinGameButton />
                     </div>
                 </section>
             </main>
         </>
-    );
-}
-
-function Button({message} : ButtonType) {
-    return (
-        <button className="bg-slate-700 hover:bg-slate-800 shadow-lg my-2 py-2 rounded-md w-8/12 font-bold text-slate-50 text-xs 5xs:text-sm hover:scale-105 transition-transform hover:cursor-pointer">{message}</button>
     );
 }
